@@ -1,22 +1,7 @@
 # LLM API
 
-This application can be used to run LLMs (Large Language Models) in docker containers, it's built in a generic way so that it can be reused for multiple types of models.
+Generates a REST API to use LLaMa2 model via docker images that run on CPU, not GPU
 
-The main motivation to start this project, was to be able to use different LLMs running on a local machine or a remote server with [langchain](https://github.com/hwchase17/langchain) using [langchain-llm-api](https://github.com/1b5d/langchain-llm-api)
-
-Contribution for supporting more models is welcomed.
-
-### roadmap
-
-- [x] Write an implementation for Alpaca
-- [x] Write an implementation for Llama
-- [x] Write an implementation for [Vicuna](https://github.com/lm-sys/FastChat)
-- [x] Support GPTQ-for-LLaMa
-- [x] huggingface pipeline
-- [x] Llama 2
-- [ ] Lora support
-- [ ] Support OpenAI
-- [ ] Support RWKV-LM
 
 # Usage
 
@@ -27,7 +12,7 @@ run using docker:
 create a `config.yaml` file with the configs described below and then run:
 
 ```
-docker run -v $PWD/models/:/models:rw -v $PWD/config.yaml:/llm-api/config.yaml:ro -p 8000:8000 --ulimit memlock=16000000000 1b5d/llm-api
+docker run -v $PWD/models/:/models:rw -v $PWD/config.yaml:/llm-api/config.yaml:ro -p 8000:8000 --ulimit memlock=16000000000 ghcr.io/p-r-t/llm-api
 ```
 
 or use the `docker-compose.yaml` in this repo and run using compose:
