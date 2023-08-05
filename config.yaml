@@ -1,8 +1,8 @@
 models_dir: /models
 model_family: llama
 setup_params:
-  repo_id: user/repo_id
-  filename: ggml-model-q4_0.bin
+  repo_id: TheBloke/Llama-2-7B-Chat-GGML
+  filename: llama-2-7b-chat.ggmlv3.q4_0.bin  
 model_params:
   n_ctx: 512
   n_parts: -1
